@@ -44,7 +44,6 @@ void solve() {
 
 	cin >> n >> m;
 
-	//asdf
 	return;
 }
 
