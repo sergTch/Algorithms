@@ -15,6 +15,8 @@
 #include<unordered_set>
 #include<stdint.h>
 
+#include"AVLtreeSum.h"
+
 using namespace std;
 
 void run() {
@@ -50,7 +52,7 @@ int main() {
 	run();
 
 	int64_t test = 1;
-	cin >> test;
+	//cin >> test;
 	int i = 1;
 
 	while (test--) {
