@@ -33,6 +33,18 @@
     <ClCompile Include="cNtoK.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="str_algo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="timer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dividers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="visualisation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="segment_tree.h">
@@ -48,6 +60,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="cNtoK.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="str_algo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dividers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="visualisation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
