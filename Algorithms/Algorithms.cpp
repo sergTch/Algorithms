@@ -29,10 +29,6 @@ typedef pair<int64_t, int64_t> cut;
 inline cut flip(cut c) { return cut(c.second, c.first); }
 inline cut sortCut(cut c) { return c.first < c.second ? c : flip(c); }
 
-void show_bits(bitset<8> bx) {
-	cout << bx << endl;
-}
-
 const int64_t inf = INT64_MAX;
 
 const int64_t MOD = 998244353;
