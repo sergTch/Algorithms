@@ -41,3 +41,23 @@ vector<int64_t> find_all(const string& s, const string& p) {
 
 	return rez;
 }
+
+vector<int64_t> z_func(const string& s)
+{
+	int64_t n = s.size();
+	int64_t idx = 0;
+	vector<int64_t> rez(n);
+
+	for (int64_t i = 1; i < n; i++) {
+		if (idx + rez[idx] - i > 0)
+			rez[i] = min(rez[i - idx], rez[idx] + idx - i);
+
+		while (i + rez[i] < n && s[i + rez[i]] == s[rez[i]])
+			rez[i]++;
+		
+		if (idx + rez[idx] < i + rez[i])
+			idx = i;
+	}
+
+	return rez;
+}

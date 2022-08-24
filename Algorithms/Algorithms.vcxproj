@@ -135,6 +135,7 @@
     <ClCompile Include="segment_tree.cpp" />
     <ClCompile Include="setUnion.cpp" />
     <ClCompile Include="str_algo.cpp" />
+    <ClCompile Include="suffixTree.cpp" />
     <ClCompile Include="timer.cpp" />
     <ClCompile Include="visualisation.cpp" />
   </ItemGroup>
@@ -146,6 +147,7 @@
     <ClInclude Include="segment_tree.h" />
     <ClInclude Include="setUnion.h" />
     <ClInclude Include="str_algo.h" />
+    <ClInclude Include="suffixTree.h" />
     <ClInclude Include="timer.h" />
     <ClInclude Include="visualisation.h" />
   </ItemGroup>
