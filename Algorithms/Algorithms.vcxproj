@@ -130,7 +130,7 @@
     <ClCompile Include="Algorithms.cpp" />
     <ClCompile Include="AVLtreeSum.cpp" />
     <ClCompile Include="cNtoK.cpp" />
-    <ClCompile Include="dividers.cpp" />
+    <ClCompile Include="numbers.cpp" />
     <ClCompile Include="fenwick.cpp" />
     <ClCompile Include="segment_tree.cpp" />
     <ClCompile Include="setUnion.cpp" />
@@ -142,7 +142,7 @@
   <ItemGroup>
     <ClInclude Include="AVLtreeSum.h" />
     <ClInclude Include="cNtoK.h" />
-    <ClInclude Include="dividers.h" />
+    <ClInclude Include="numbers.h" />
     <ClInclude Include="fenwick.h" />
     <ClInclude Include="segment_tree.h" />
     <ClInclude Include="setUnion.h" />

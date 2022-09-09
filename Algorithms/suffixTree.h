@@ -26,28 +26,44 @@ public:
 		~node();
 	};
 
+	class position {
+	public:
+		int64_t start = 0;
+		int64_t len = 0;
+		int64_t actIdx = 0;
+		node* actNode = nullptr;
+		node* lastNew = nullptr;
+		char actEdge = 0;
+
+		const suffixTree& st;
+
+		position(const suffixTree& st);
+
+		void setEdge();
+		node* nextNode();
+		void goDown();
+
+		bool addChar(const char& ch);
+		void next();
+	};
+
 private:
-
-	int64_t remain = 0;
-	int64_t actLen = 0;
-	node* actNode = nullptr;
-	node* lastNew = nullptr;
-	char actEdge = 0;
-
-	bool goDown(node* next);
-	void extend();
+	
+	void extend(position& pos);
 	void set_idxs(node* nd, int64_t depth);
 
 public:
 
 	string s;
-	int64_t end = 0;
 	int64_t n;
 	node* root;
 
 	void show(node* nd, int64_t depth);
 	suffixTree(const string& s);
 
-	vector<int64_t> find_all(const string& p);
+	vector<int64_t> find_all(const string& p) const;
+	
+	//largest common substring
+	int64_t LCS(const string& s, int64_t* idx1 = nullptr, int64_t* idx2 = nullptr) const;
 };
 

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include "numbers.h"
 
 using namespace std;
 
@@ -10,19 +11,6 @@ private:
 	int64_t mod;
 	vector<int64_t> fact;
 	vector<int64_t> rfact;
-
-	int64_t binPow(int64_t a, int64_t b) {
-		int64_t rez = 1;
-
-		while (b > 0) {
-			if (b % 2)
-				rez = rez * a % mod;
-			a = a * a % mod;
-			b /= 2;
-		}
-
-		return rez;
-	}
 
 public:
 	cNtoK(int64_t m) {
@@ -51,7 +39,7 @@ public:
 
 		for (int i = size; i < n; i++) {
 			fact[i] = fact[i - 1] * i % mod;
-			rfact[i] = binPow(fact[i], mod - 2);
+			rfact[i] = binPow(fact[i], mod - 2, mod);
 		}
 	}
 

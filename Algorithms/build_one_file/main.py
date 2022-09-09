@@ -39,6 +39,7 @@ def add_file(fname):
     for line in open(src + fname).readlines():
         if "".join(line.split())[:8] != "#include":
             out.write(line)
+    out.write("\n")
 
 done = set()
 
