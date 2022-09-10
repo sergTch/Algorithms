@@ -7,6 +7,11 @@ class fenw_sum
 private:
 	T* arr;
 
+	void addFromStart(T x, int idx) {
+		for (; idx <= n; idx += (idx & (-idx)))
+			arr[idx] += x;
+	}
+
 public:
 	int n;
 
@@ -20,13 +25,13 @@ public:
 	}
 
 	void add(T x, int idx) {
-		for (; idx <= n; idx += (idx & (-idx)))
-			arr[idx] += x;
+		addFromStart(x, idx);
+		addFromStart(-x, idx + 1);
 	}
 
 	void add(T x, int l, int r) {
-		add(x, l);
-		add(-x, r);
+		addFromStart(x, l);
+		addFromStart(-x, r + 1);
 	}
 
 	T get(int n) {
@@ -35,9 +40,5 @@ public:
 			rez += arr[t];
 
 		return rez;
-	}
-
-	T get(int l, int r) {
-		return get(r - 1) - get(l - 1);
 	}
 };
