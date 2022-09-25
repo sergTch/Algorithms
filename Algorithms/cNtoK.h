@@ -43,7 +43,7 @@ public:
 		}
 	}
 
-	int64_t calc(int64_t n, int64_t k) {
+	int64_t operator()(int64_t n, int64_t k) {
 		if (n >= fact.size())
 			fillBuf(n);
 

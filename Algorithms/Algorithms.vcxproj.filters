@@ -48,6 +48,9 @@
     <ClCompile Include="suffixTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="convex_hull.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="segment_tree.h">
@@ -78,6 +81,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="suffixTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="convex_hull.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -43,7 +43,7 @@ def add_file(fname):
 
 done = set()
 
-for lib in libs:
+for lib in libs[::-1]:
     if lib not in done:
         done.add(lib)
         add_file(lib)
