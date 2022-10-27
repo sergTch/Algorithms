@@ -1,5 +1,3 @@
-from asyncore import write
-
 main = "Algorithms.cpp"
 src = "../"
 stl = []
@@ -32,7 +30,7 @@ done = set()
 for lib in stl[::-1]:
     if lib not in done:
         done.add(lib)
-        out.write(lib + '\n')
+        out.write(lib.replace("include", "include ") + '\n')
 
 def add_file(fname):
     print(fname)
