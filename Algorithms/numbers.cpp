@@ -83,7 +83,7 @@ int64_t eulerFunc(int64_t n, map<int64_t, int64_t>* primes)
 
 int64_t inverseByMod(int64_t x, int64_t mod, map<int64_t, int64_t> *modPrimes)
 {
-	return binPow(x, eulerFunc(mod, modPrimes), mod);
+	return binPow(x, eulerFunc(mod, modPrimes) - 1, mod);
 }
 
 uint64_t binPow(uint64_t a, uint64_t b) {
