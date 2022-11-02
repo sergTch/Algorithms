@@ -20,6 +20,7 @@ vector<map<int64_t, int64_t>> precalcPrimes(int64_t n);
 //find inverse to x element
 // inverse (x) * x % mod == 1
 int64_t inverseByMod(int64_t x, int64_t mod, map<int64_t, int64_t>* modPrimes = nullptr);
+int64_t inverseByModGCD(int64_t x, int64_t mod);
 
 int64_t eulerFunc(int64_t n, map<int64_t, int64_t>* primes = nullptr);
 

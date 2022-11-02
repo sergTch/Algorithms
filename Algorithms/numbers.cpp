@@ -1,5 +1,6 @@
 #include "numbers.h"
 #include <algorithm>
+#include <stack>
 
 map<int64_t, int64_t> getPrimes(int64_t n) {
 	map<int64_t, int64_t> rez;
@@ -84,6 +85,45 @@ int64_t eulerFunc(int64_t n, map<int64_t, int64_t>* primes)
 int64_t inverseByMod(int64_t x, int64_t mod, map<int64_t, int64_t> *modPrimes)
 {
 	return binPow(x, eulerFunc(mod, modPrimes) - 1, mod);
+}
+
+int64_t inverseByModGCD(int64_t x, int64_t mod)
+{
+	stack<int64_t> st;
+	int64_t t, k, a, b;
+	a = mod;
+	b = x;
+
+	while (true) {
+		t = a % b;
+		if (t == 0)
+			break;
+
+		st.push(a / b);
+		a = b;
+		b = t;
+	}
+
+	t = 0;
+	k = 1;
+
+	while (a != mod) {
+		x = a;
+		a = st.top() * a + b;
+		b = x;
+
+		x = k;
+		k = t - st.top() * k;
+		t = x;
+
+		st.pop();
+	}
+
+	k %= mod;
+
+	if (k < 0)
+		k += mod;
+	return k;
 }
 
 uint64_t binPow(uint64_t a, uint64_t b) {
