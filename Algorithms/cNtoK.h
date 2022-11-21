@@ -44,6 +44,9 @@ public:
 	}
 
 	int64_t operator()(int64_t n, int64_t k) {
+		if (k > n)
+			return 0;
+
 		if (n >= fact.size())
 			fillBuf(n);
 
